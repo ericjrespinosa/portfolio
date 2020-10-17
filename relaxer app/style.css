@@ -71,7 +71,7 @@ body {
   left: 140px;
   width: 20px;
   height: 190px;
-  animation: rotate 8s linear forwards infinite;
+  animation: rotate 10s linear forwards infinite;
   transform-origin: bottom center;
 }
 
@@ -82,5 +82,46 @@ body {
 
   to{
     transform: rotate(360deg);
+  }
+}
+
+.container.grow {
+  animation: grow 3s linear forwards;
+}
+
+@keyframes grow {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.2);
+  }
+}
+
+.container.shrink {
+  animation: shrink 3s linear forwards;
+}
+
+@keyframes shrink {
+  from {
+    transform: scale(1.2);
+  }
+
+  to {
+  transform: scale(1);
+  }
+}
+.container.grow {
+  animation: grow 3s linear forwards;
+}
+
+@keyframes grow {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.2);
   }
 }
