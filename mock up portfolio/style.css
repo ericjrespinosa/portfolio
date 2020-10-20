@@ -1,0 +1,30 @@
+.jumbotron {
+  background-image: url(images/newnew.jpg);
+  text-align: center;
+  background-size: cover;
+}
+.display-4 {
+  font-weight: 330;
+}
+
+.jumbotron p{
+  font-weight: 500;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+.pix:hover{
+  opacity: .3;
+}
+
+.progress {
+  margin: 7px;
+  font-size: 17px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.btn {
+  margin: 8px;
+}

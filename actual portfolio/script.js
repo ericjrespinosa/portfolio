@@ -26,3 +26,6 @@ function complete () {
   clearInterval(timer);
   timer = null;
 }
+
+const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
+
