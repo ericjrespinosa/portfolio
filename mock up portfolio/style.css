@@ -1,13 +1,23 @@
 
 .jumbotron {
   text-align: center;
+  background-color: rgb(179, 198, 214);
 }
+
 .display-4 {
   font-weight: 330;
 }
 
 .jumbotron p{
   font-weight: 500;
+}
+
+.personal {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  right: 500px;
+  padding: 10px;
 }
 
 h1 {
