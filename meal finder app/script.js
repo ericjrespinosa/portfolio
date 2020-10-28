@@ -50,7 +50,7 @@ function searchMeal(e) {
 
 //fetch meal by ID
 
-function getMealByID(mealID) {
+function getMealByID(mealID) { //making a fetch request and gets replaced with the input meal id
   fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealID}`)
   .then(res => res.json())
   .then(data =>{
@@ -76,12 +76,12 @@ function getRandomMeal() {
 }
 
 //add meal to DOM
-function addMealToDOM(meal) {
+function addMealToDOM(meal) {//the for loop only shows ingredients with less than 20 
   const ingredients = [];
 
   for(let i = 1; i <= 20; i++) {
     if(meal[`strIngredient${i}`]) {
-      ingredients.push(`${meal[`strIngredient${i}`]} - ${meal[`strMeasure${i}`]}`);
+      ingredients.push(`${meal[`strIngredient${i}`]} - ${meal[`strMeasure${i}`]}`); //if it is true then we want it to push all the ingredients and measurements to the page
     } else {
       break;
     }
@@ -112,12 +112,12 @@ function addMealToDOM(meal) {
 submit.addEventListener("submit", searchMeal);
 random.addEventListener("click", getRandomMeal);
 
-mealsEl.addEventListener('click', e=> {
+mealsEl.addEventListener('click', e=> { //finds out if meal info div is equal to the click
   const mealInfo = e.path.find(item =>{
-    if(item.classList) {
-      return item.classList.contains('meal-info');
-    } else {
-      return false;
+    if(item.classList) { //checks to see if their is class
+      return item.classList.contains('meal-info'); //then return back the meal info
+    } else { 
+      return false; //if false nothing happens
     }
   })
 
