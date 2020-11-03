@@ -27,7 +27,7 @@ function searchMeal(e) {
        if(data.meals == null) {
         resultHeading.innerHTML = '<p>There are not search results. Try again!</p>';
        } else {
-        mealsEl.innerHTML = data.meals
+        mealsEl.innerHTML = data.meals //have access to the meals now
         .map(
           meal => `
         <div class = "meal">
@@ -37,7 +37,7 @@ function searchMeal(e) {
           </div>
         </div>
 
-        `)
+        `) //above manipulates the DOM to show the meals you searched up
           .join('');
        }
     });
@@ -60,7 +60,7 @@ function getMealByID(mealID) { //making a fetch request and gets replaced with t
   });
 }
 
-//fethc random meal
+//fetch random meal
 function getRandomMeal() {
   //clear meals and heading
   mealsEl.innerHTML = '';
@@ -72,7 +72,7 @@ function getRandomMeal() {
       const meal = data.meals[0];
 
       addMealToDOM(meal);
-    });
+    });S
 }
 
 //add meal to DOM
